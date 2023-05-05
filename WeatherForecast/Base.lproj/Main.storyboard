@@ -38,7 +38,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbo-dE-d2p">
                                         <rect key="frame" x="0.0" y="59" width="200" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Fetch"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Search"/>
                                         <connections>
                                             <action selector="FetchDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJG-kx-wm0"/>
                                         </connections>

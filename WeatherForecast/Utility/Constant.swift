@@ -37,6 +37,7 @@ struct STRING {
     static let Thunderstorm     = "Thunderstorm"
     static let Thunder          = "Thunder"
     static let Weather          = "Weather"
+    static let Drizzle          = "Drizzle"
     
     //ViewControllers
     static let WeatherDetailsVC = "WeatherDetails"

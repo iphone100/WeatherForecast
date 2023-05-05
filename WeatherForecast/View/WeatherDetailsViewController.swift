@@ -36,6 +36,9 @@ class WeatherDetailsViewController: UIViewController, DataDelegate {
         case STRING.Thunderstorm:
             self.navigationItem.title = STRING.Thunderstorm
             self.currentWeatherImage.image = UIImage(named: STRING.Thunder)
+        case STRING.Drizzle:
+            self.navigationItem.title = STRING.Drizzle
+            self.currentWeatherImage.image = UIImage(named: STRING.Drizzle)
         default:
             self.navigationItem.title = STRING.Weather
             self.currentWeatherImage.image = UIImage(named: STRING.Sunny)

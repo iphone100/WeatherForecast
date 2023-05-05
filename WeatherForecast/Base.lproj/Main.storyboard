@@ -90,10 +90,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="Z2o-6n-beM">
-                                <rect key="frame" x="26" y="59" width="351" height="220"/>
+                                <rect key="frame" x="26" y="74" width="351" height="182"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRD-uU-Xlk">
+                                <rect key="frame" x="25" y="281" width="342" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="UmH-8B-VYJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DBQ-fO-TIA">
-                                <rect key="frame" x="25.666666666666657" y="326" width="342" height="200"/>
+                                <rect key="frame" x="25.666666666666657" y="340" width="342" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="4BU-tU-tTc">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="33.333333333333336"/>
@@ -162,16 +171,20 @@
                         <viewLayoutGuide key="safeArea" id="6UI-zS-cav"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
-                            <constraint firstItem="DBQ-fO-TIA" firstAttribute="top" secondItem="Z2o-6n-beM" secondAttribute="bottom" constant="47" id="381-4n-WG2"/>
                             <constraint firstItem="Z2o-6n-beM" firstAttribute="leading" secondItem="6UI-zS-cav" secondAttribute="leading" constant="26" id="5Q7-PF-Lol"/>
+                            <constraint firstItem="hRD-uU-Xlk" firstAttribute="top" secondItem="Z2o-6n-beM" secondAttribute="bottom" constant="25" id="7FS-wY-Ao6"/>
+                            <constraint firstItem="hRD-uU-Xlk" firstAttribute="top" secondItem="q6n-26-Xjv" secondAttribute="top" constant="281" id="9Xj-V3-jIN"/>
+                            <constraint firstItem="hRD-uU-Xlk" firstAttribute="leading" secondItem="6UI-zS-cav" secondAttribute="leading" constant="25" id="FCq-eJ-zhA"/>
+                            <constraint firstItem="DBQ-fO-TIA" firstAttribute="top" secondItem="hRD-uU-Xlk" secondAttribute="bottom" constant="26" id="Hr2-aJ-d44"/>
+                            <constraint firstItem="hRD-uU-Xlk" firstAttribute="centerX" secondItem="DBQ-fO-TIA" secondAttribute="centerX" id="Shu-0b-1kU"/>
                             <constraint firstItem="DBQ-fO-TIA" firstAttribute="centerX" secondItem="q6n-26-Xjv" secondAttribute="centerX" id="iR0-ee-1OC"/>
-                            <constraint firstItem="DBQ-fO-TIA" firstAttribute="top" secondItem="q6n-26-Xjv" secondAttribute="topMargin" constant="267" id="k1y-Ss-EFr"/>
                             <constraint firstItem="Z2o-6n-beM" firstAttribute="trailing" secondItem="q6n-26-Xjv" secondAttribute="trailingMargin" id="kgB-m1-AEf"/>
-                            <constraint firstItem="Z2o-6n-beM" firstAttribute="top" secondItem="6UI-zS-cav" secondAttribute="top" id="pfG-yG-22r"/>
+                            <constraint firstItem="Z2o-6n-beM" firstAttribute="top" secondItem="6UI-zS-cav" secondAttribute="top" constant="15" id="pfG-yG-22r"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="currentWeather" destination="LX3-HU-gXr" id="niH-Hr-3XH"/>
+                        <outlet property="currentWeatherDescription" destination="hRD-uU-Xlk" id="brw-gN-sKB"/>
                         <outlet property="currentWeatherImage" destination="Z2o-6n-beM" id="8md-oZ-LZU"/>
                         <outlet property="currentWeatherMax" destination="NnF-As-3b8" id="rWK-bz-FDJ"/>
                         <outlet property="currentWeatherMin" destination="b2a-zf-eYH" id="vx1-bw-jqD"/>
@@ -185,6 +198,9 @@
     <resources>
         <image name="Banner" width="120" height="104.66666412353516"/>
         <image name="Sunny" width="33.333332061767578" height="33.333332061767578"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

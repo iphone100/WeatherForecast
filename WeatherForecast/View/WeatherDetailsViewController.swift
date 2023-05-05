@@ -13,13 +13,15 @@ class WeatherDetailsViewController: UIViewController, DataDelegate {
     @IBOutlet weak var currentWeatherMin: UILabel!
     @IBOutlet weak var currentWeatherMax: UILabel!
     @IBOutlet weak var currentWeatherImage: UIImageView!
-   
+    @IBOutlet weak var currentWeatherDescription: UILabel!
+
     //MARK: Render UI Data
     func fetchCurrentDayData(_ data: CurrentDayWeatherData) {
         self.details = data
         print(self.details as Any)
         self.currentWeatherMin.text = "\(Int(details!.main.tempmin))˚"
         self.currentWeatherMax.text = "\(Int(details!.main.tempmax))˚"
+        self.currentWeatherDescription.text = details!.weather[0].description
         switch  details!.weather[0].main {
         case STRING.Clouds:
             self.navigationItem.title = STRING.Cloudy
